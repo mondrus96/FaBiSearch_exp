@@ -1,0 +1,65 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Define the subject number based on parent folder
+> subnum = as.numeric(substr(getwd(), nchar(getwd()), nchar(getwd())))
+> 
+> # Run the network estimation script
+> source("../../scripts/HPnets.R")
+Loading required package: NMF
+Loading required package: pkgmaker
+Loading required package: registry
+Loading required package: rngtools
+Loading required package: cluster
+NMF - BioConductor layer [OK] | Shared memory capabilities [NO: bigmemory] | Cores 47/48
+  To enable shared memory capabilities, try: install.extras('
+NMF
+')
+[1] "User defined rank: 14"
+[1] "Estimating stationary block 1"
+[1] "Estimating stationary block 2"
+[1] "Estimating stationary block 3"
+[1] "Estimating stationary block 4"
+[1] "Estimating stationary block 5"
+[1] "User defined rank: 4"
+[1] "Estimating stationary block 1"
+[1] "Estimating stationary block 2"
+[1] "Estimating stationary block 3"
+[1] "Estimating stationary block 4"
+[1] "Estimating stationary block 5"
+[1] "User defined rank: 4"
+[1] "Estimating stationary block 1"
+[1] "Estimating stationary block 2"
+[1] "Estimating stationary block 3"
+[1] "Estimating stationary block 4"
+[1] "User defined rank: 15"
+[1] "Estimating stationary block 1"
+[1] "Estimating stationary block 2"
+[1] "Estimating stationary block 3"
+[1] "Estimating stationary block 4"
+[1] "Estimating stationary block 5"
+[1] "Estimating stationary block 6"
+Warning messages:
+1: package ‘fabisearch’ was built under R version 4.1.2 
+2: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+3: 'rgl.init' failed, running with 'rgl.useNULL = TRUE'. 
+> 
+> proc.time()
+    user   system  elapsed 
+9485.506 1675.837  549.312 

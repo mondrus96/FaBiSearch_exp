@@ -1,0 +1,5 @@
+# FaBiSearch Simulation - Change Point Detection
+
+Each folder contains the simulation results. For each simulation, the change point detection was split into four separate runs, denoted by Simx.1.R, Simx.2.R, Simx.3.R, and Simx.4.R (where x is the simulation number) and denotes replications 1 to 25, 26 to 50, 51 to 75, and 76 to 100 respectively. 
+
+For each simulation run, there is an associated .sh and .Rout with the same naming convention - these are the shell scripts for SLURM (used to run on a remote cluster) and console logs, respectively. With SLURM, there are associated SLURM .out files which are related to the batch job. Finally, the .rda files contain the results for change point detection for the aforementioned replications, which are included in the naming convention as well.

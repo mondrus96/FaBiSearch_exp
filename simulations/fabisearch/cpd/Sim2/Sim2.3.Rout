@@ -1,0 +1,984 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ### Simulation parameters ###
+> reps = 51:75
+> simnum = as.numeric(substr(getwd(), nchar(getwd()), nchar(getwd())))
+> #############################
+> 
+> # Load all shared simulation functions
+> filesrcs = list.files(path = "../../../sharedfunctions", pattern="*.R")
+> sapply(paste0("../../../sharedfunctions/", filesrcs), source, .GlobalEnv)
+        ../../../sharedfunctions/GenerateFunctions.R
+value   ?                                           
+visible FALSE                                       
+        ../../../sharedfunctions/Simulations.R
+value   ?                                     
+visible FALSE                                 
+> rm(filesrcs)
+> 
+> # Run the simulations
+> source("../../scripts/RunSims.R")
+Loading required package: NMF
+Loading required package: pkgmaker
+Loading required package: registry
+Loading required package: rngtools
+Loading required package: cluster
+NMF - BioConductor layer [OK] | Shared memory capabilities [OK] | Cores 47/48
+[1] 51
+[1] "Finding optimal rank"
+[1] "Optimal rank: 7"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -4.10688704078169"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -2.49394027225937"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+   i rank   T stat_test     mins
+1 51    7  99      TRUE 24.54927
+2 51    7 149     FALSE 24.54927
+[1] 52
+[1] "Finding optimal rank"
+[1] "Optimal rank: 7"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -4.17572184504262"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -2.63457907456205"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+   i rank   T stat_test     mins
+1 51    7  99      TRUE 24.54927
+2 51    7 149     FALSE 24.54927
+3 52    7  99      TRUE 25.05465
+4 52    7 149     FALSE 25.05465
+[1] 53
+[1] "Finding optimal rank"
+[1] "Optimal rank: 3"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -22.0256261617266"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -1.28287649303824"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+   i rank   T stat_test     mins
+1 51    7  99      TRUE 24.54927
+2 51    7 149     FALSE 24.54927
+3 52    7  99      TRUE 25.05465
+4 52    7 149     FALSE 25.05465
+5 53    3  99      TRUE 14.90788
+6 53    3 149     FALSE 14.90788
+[1] 54
+[1] "Finding optimal rank"
+[1] "Optimal rank: 8"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -9.0354586736576"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+   i rank   T stat_test     mins
+1 51    7  99      TRUE 24.54927
+2 51    7 149     FALSE 24.54927
+3 52    7  99      TRUE 25.05465
+4 52    7 149     FALSE 25.05465
+5 53    3  99      TRUE 14.90788
+6 53    3 149     FALSE 14.90788
+7 54    8 100      TRUE 21.08313
+[1] 55
+[1] "Finding optimal rank"
+[1] "Optimal rank: 5"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -16.3488435844096"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -2.00860688942754"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+   i rank   T stat_test     mins
+1 51    7  99      TRUE 24.54927
+2 51    7 149     FALSE 24.54927
+3 52    7  99      TRUE 25.05465
+4 52    7 149     FALSE 25.05465
+5 53    3  99      TRUE 14.90788
+6 53    3 149     FALSE 14.90788
+7 54    8 100      TRUE 21.08313
+8 55    5  99      TRUE 20.48083
+9 55    5 149     FALSE 20.48083
+[1] 56
+[1] "Finding optimal rank"
+[1] "Optimal rank: 7"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -3.83585668798986"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+[1] 57
+[1] "Finding optimal rank"
+[1] "Optimal rank: 5"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -13.9939884112485"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+11 57    5 100      TRUE 14.55589
+[1] 58
+[1] "Finding optimal rank"
+[1] "Optimal rank: 6"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "98 : 99"
+[1] "Change Point At: 99 , Delta Loss: -8.51470406371114"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -2.37857156165541"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+11 57    5 100      TRUE 14.55589
+12 58    6  99      TRUE 22.88669
+13 58    6 149     FALSE 22.88669
+[1] 59
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -17.7655117669828"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+11 57    5 100      TRUE 14.55589
+12 58    6  99      TRUE 22.88669
+13 58    6 149     FALSE 22.88669
+14 59    4 100      TRUE 12.34306
+[1] 60
+[1] "Finding optimal rank"
+[1] "Optimal rank: 6"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 100 , Delta Loss: -10.8186842635384"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+11 57    5 100      TRUE 14.55589
+12 58    6  99      TRUE 22.88669
+13 58    6 149     FALSE 22.88669
+14 59    4 100      TRUE 12.34306
+15 60    6 100      TRUE 17.28677
+[1] 61
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -24.1113469524745"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -2.04296632059297"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+11 57    5 100      TRUE 14.55589
+12 58    6  99      TRUE 22.88669
+13 58    6 149     FALSE 22.88669
+14 59    4 100      TRUE 12.34306
+15 60    6 100      TRUE 17.28677
+16 61    4  99      TRUE 17.72288
+17 61    4 149     FALSE 17.72288
+[1] 62
+[1] "Finding optimal rank"
+[1] "Optimal rank: 3"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -24.4756036506985"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test     mins
+1  51    7  99      TRUE 24.54927
+2  51    7 149     FALSE 24.54927
+3  52    7  99      TRUE 25.05465
+4  52    7 149     FALSE 25.05465
+5  53    3  99      TRUE 14.90788
+6  53    3 149     FALSE 14.90788
+7  54    8 100      TRUE 21.08313
+8  55    5  99      TRUE 20.48083
+9  55    5 149     FALSE 20.48083
+10 56    7 100      TRUE 18.53819
+11 57    5 100      TRUE 14.55589
+12 58    6  99      TRUE 22.88669
+13 58    6 149     FALSE 22.88669
+14 59    4 100      TRUE 12.34306
+15 60    6 100      TRUE 17.28677
+16 61    4  99      TRUE 17.72288
+17 61    4 149     FALSE 17.72288
+18 62    3 100      TRUE 10.31521
+[1] 63
+[1] "Finding optimal rank"
+[1] "Optimal rank: 3"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -16.0647583150068"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+[1] 64
+[1] "Finding optimal rank"
+[1] "Optimal rank: 8"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "95 : 98"
+[1] "96 : 98"
+[1] "97 : 98"
+[1] "Change Point At: 97 , Delta Loss: -4.0922079516056"
+[1] "147 : 150"
+[1] "148 : 150"
+[1] "149 : 150"
+[1] "Change Point At: 150 , Delta Loss: -2.48205955042616"
+[1] "Refitting split at 97"
+[1] "Refitting split at 150"
+[1] "Permuting split at 97"
+[1] "Permuting split at 150"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+[1] 65
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -20.238839104852"
+[1] "149 : 150"
+[1] "Change Point At: 150 , Delta Loss: -1.62846863900415"
+[1] "Refitting split at 99"
+[1] "Refitting split at 150"
+[1] "Permuting split at 99"
+[1] "Permuting split at 150"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+[1] 66
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -20.3899854068145"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+[1] 67
+[1] "Finding optimal rank"
+[1] "Optimal rank: 7"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -3.44186849245756"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+[1] 68
+[1] "Finding optimal rank"
+[1] "Optimal rank: 6"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 100 , Delta Loss: -6.53339002045864"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+[1] 69
+[1] "Finding optimal rank"
+[1] "Optimal rank: 5"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "97 : 100"
+[1] "98 : 100"
+[1] "99 : 100"
+[1] "Change Point At: 99 , Delta Loss: -5.02667150678528"
+[1] "149 : 150"
+[1] "Change Point At: 149 , Delta Loss: -2.02470413159816"
+[1] "Refitting split at 99"
+[1] "Refitting split at 149"
+[1] "Permuting split at 99"
+[1] "Permuting split at 149"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+[1] 70
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "50 : 100"
+[1] "74 : 100"
+[1] "86 : 100"
+[1] "92 : 100"
+[1] "95 : 100"
+[1] "95 : 98"
+[1] "96 : 98"
+[1] "97 : 98"
+[1] "Change Point At: 98 , Delta Loss: -22.6812305438954"
+[1] "148 : 150"
+[1] "148 : 149"
+[1] "Change Point At: 148 , Delta Loss: -1.96842267501897"
+[1] "Refitting split at 98"
+[1] "Refitting split at 148"
+[1] "Permuting split at 98"
+[1] "Permuting split at 148"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+29 70    4  98      TRUE 18.437369
+30 70    4 148     FALSE 18.437369
+[1] 71
+[1] "Finding optimal rank"
+[1] "Optimal rank: 7"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -8.07076788169985"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+29 70    4  98      TRUE 18.437369
+30 70    4 148     FALSE 18.437369
+31 71    7 100      TRUE 18.797262
+[1] 72
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -25.9045930164745"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+29 70    4  98      TRUE 18.437369
+30 70    4 148     FALSE 18.437369
+31 71    7 100      TRUE 18.797262
+32 72    4 100      TRUE 12.548584
+[1] 73
+[1] "Finding optimal rank"
+[1] "Optimal rank: 6"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "100 : 103"
+[1] "100 : 102"
+[1] "101 : 102"
+[1] "Change Point At: 101 , Delta Loss: -10.9216742172526"
+[1] "50 : 51"
+[1] "Change Point At: 50 , Delta Loss: -2.3985188759362"
+[1] "Refitting split at 50"
+[1] "Refitting split at 101"
+[1] "Permuting split at 50"
+[1] "Permuting split at 101"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+29 70    4  98      TRUE 18.437369
+30 70    4 148     FALSE 18.437369
+31 71    7 100      TRUE 18.797262
+32 72    4 100      TRUE 12.548584
+33 73    6  50      TRUE 22.669671
+34 73    6 101      TRUE 22.669671
+[1] 74
+[1] "Finding optimal rank"
+[1] "Optimal rank: 4"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "100 : 103"
+[1] "101 : 103"
+[1] "102 : 103"
+[1] "Change Point At: 103 , Delta Loss: -19.9940827367553"
+[1] "50 : 53"
+[1] "51 : 53"
+[1] "52 : 53"
+[1] "Change Point At: 53 , Delta Loss: -1.50383287999192"
+[1] "Refitting split at 53"
+[1] "Refitting split at 103"
+[1] "Permuting split at 53"
+[1] "Permuting split at 103"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+29 70    4  98      TRUE 18.437369
+30 70    4 148     FALSE 18.437369
+31 71    7 100      TRUE 18.797262
+32 72    4 100      TRUE 12.548584
+33 73    6  50      TRUE 22.669671
+34 73    6 101      TRUE 22.669671
+35 74    4  53     FALSE 19.082869
+36 74    4 103      TRUE 19.082869
+[1] 75
+[1] "Finding optimal rank"
+[1] "Optimal rank: 6"
+[1] "50 : 150"
+[1] "99 : 150"
+[1] "99 : 125"
+[1] "99 : 112"
+[1] "99 : 106"
+[1] "99 : 103"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -3.90578228540834"
+[1] "Refitting split at 100"
+[1] "Permuting split at 100"
+    i rank   T stat_test      mins
+1  51    7  99      TRUE 24.549268
+2  51    7 149     FALSE 24.549268
+3  52    7  99      TRUE 25.054653
+4  52    7 149     FALSE 25.054653
+5  53    3  99      TRUE 14.907879
+6  53    3 149     FALSE 14.907879
+7  54    8 100      TRUE 21.083133
+8  55    5  99      TRUE 20.480834
+9  55    5 149     FALSE 20.480834
+10 56    7 100      TRUE 18.538192
+11 57    5 100      TRUE 14.555892
+12 58    6  99      TRUE 22.886689
+13 58    6 149     FALSE 22.886689
+14 59    4 100      TRUE 12.343063
+15 60    6 100      TRUE 17.286766
+16 61    4  99      TRUE 17.722877
+17 61    4 149     FALSE 17.722877
+18 62    3 100      TRUE 10.315210
+19 63    3 100      TRUE  9.972873
+20 64    8  97      TRUE 29.022678
+21 64    8 150     FALSE 29.022678
+22 65    4  99      TRUE 17.997191
+23 65    4 150     FALSE 17.997191
+24 66    4 100      TRUE 12.332248
+25 67    7 100      TRUE 18.745773
+26 68    6 100      TRUE 17.155226
+27 69    5  99      TRUE 20.156245
+28 69    5 149     FALSE 20.156245
+29 70    4  98      TRUE 18.437369
+30 70    4 148     FALSE 18.437369
+31 71    7 100      TRUE 18.797262
+32 72    4 100      TRUE 12.548584
+33 73    6  50      TRUE 22.669671
+34 73    6 101      TRUE 22.669671
+35 74    4  53     FALSE 19.082869
+36 74    4 103      TRUE 19.082869
+37 75    6 100      TRUE 16.596131
+Warning messages:
+1: package ‘fabisearch’ was built under R version 4.1.2 
+2: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+3: 'rgl.init' failed, running with 'rgl.useNULL = TRUE'. 
+> 
+> proc.time()
+     user    system   elapsed 
+884548.33  20905.11  27209.93 

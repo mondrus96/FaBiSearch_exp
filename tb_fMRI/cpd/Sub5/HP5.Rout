@@ -1,0 +1,278 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Define the subject number based on parent folder
+> subnum = as.numeric(substr(getwd(), nchar(getwd()), nchar(getwd())))
+> 
+> # Run the simulations
+> source("../../scripts/HPcpd.R")
+Loading required package: NMF
+Loading required package: pkgmaker
+Loading required package: registry
+Loading required package: rngtools
+Loading required package: cluster
+NMF - BioConductor layer [OK] | Shared memory capabilities [OK] | Cores 47/48
+[1] "Finding optimal rank"
+[1] "Optimal rank: 15"
+[1] "50 : 274"
+[1] "161 : 274"
+[1] "161 : 218"
+[1] "189 : 218"
+[1] "189 : 204"
+[1] "196 : 204"
+[1] "199 : 204"
+[1] "201 : 204"
+[1] "202 : 204"
+[1] "203 : 204"
+[1] "Change Point At: 204 , Delta Loss: -23.3068734075099"
+[1] "50 : 154"
+[1] "101 : 154"
+[1] "127 : 154"
+[1] "140 : 154"
+[1] "146 : 154"
+[1] "149 : 154"
+[1] "151 : 154"
+[1] "152 : 154"
+[1] "153 : 154"
+[1] "Change Point At: 154 , Delta Loss: -31.2588310236858"
+[1] "50 : 104"
+[1] "76 : 104"
+[1] "89 : 104"
+[1] "96 : 104"
+[1] "99 : 104"
+[1] "99 : 102"
+[1] "99 : 101"
+[1] "100 : 101"
+[1] "Change Point At: 100 , Delta Loss: -22.5650967573831"
+[1] "254 : 274"
+[1] "254 : 264"
+[1] "254 : 259"
+[1] "254 : 257"
+[1] "254 : 256"
+[1] "254 : 255"
+[1] "Change Point At: 254 , Delta Loss: -19.4673030528945"
+[1] "Refitting split at 100"
+[1] "Refitting split at 154"
+[1] "Refitting split at 204"
+[1] "Refitting split at 254"
+[1] "Permuting split at 100"
+[1] "Permuting split at 154"
+[1] "Permuting split at 204"
+[1] "Permuting split at 254"
+  i rank   T stat_test
+1 1   15 110      TRUE
+2 1   15 164      TRUE
+3 1   15 214      TRUE
+4 1   15 264      TRUE
+[1] "Finding optimal rank"
+[1] "Optimal rank: 15"
+[1] "50 : 287"
+[1] "168 : 287"
+[1] "168 : 228"
+[1] "197 : 228"
+[1] "197 : 213"
+[1] "204 : 213"
+[1] "208 : 213"
+[1] "208 : 211"
+[1] "208 : 210"
+[1] "209 : 210"
+[1] "Change Point At: 210 , Delta Loss: -22.5707865400545"
+[1] "50 : 160"
+[1] "104 : 160"
+[1] "131 : 160"
+[1] "145 : 160"
+[1] "152 : 160"
+[1] "155 : 160"
+[1] "157 : 160"
+[1] "158 : 160"
+[1] "159 : 160"
+[1] "Change Point At: 160 , Delta Loss: -20.3209502702564"
+[1] "50 : 110"
+[1] "50 : 80"
+[1] "50 : 65"
+[1] "50 : 58"
+[1] "50 : 54"
+[1] "50 : 52"
+[1] "51 : 52"
+[1] "Change Point At: 51 , Delta Loss: -19.4402086438357"
+[1] "101 : 110"
+[1] "101 : 106"
+[1] "101 : 104"
+[1] "101 : 103"
+[1] "101 : 102"
+[1] "Change Point At: 101 , Delta Loss: -15.5570267279239"
+[1] "260 : 287"
+[1] "260 : 274"
+[1] "266 : 274"
+[1] "269 : 274"
+[1] "271 : 274"
+[1] "272 : 274"
+[1] "273 : 274"
+[1] "Change Point At: 274 , Delta Loss: -20.4653840531437"
+[1] "Refitting split at 51"
+[1] "Refitting split at 101"
+[1] "Refitting split at 160"
+[1] "Refitting split at 210"
+[1] "Refitting split at 274"
+[1] "Permuting split at 51"
+[1] "Permuting split at 101"
+[1] "Permuting split at 160"
+[1] "Permuting split at 210"
+[1] "Permuting split at 274"
+  i rank   T stat_test
+1 1   15 110      TRUE
+2 1   15 164      TRUE
+3 1   15 214      TRUE
+4 1   15 264      TRUE
+5 2   15 400      TRUE
+6 2   15 450      TRUE
+7 2   15 509      TRUE
+8 2   15 559      TRUE
+9 2   15 623      TRUE
+[1] "Finding optimal rank"
+[1] "Optimal rank: 5"
+[1] "50 : 214"
+[1] "50 : 132"
+[1] "50 : 91"
+[1] "70 : 91"
+[1] "80 : 91"
+[1] "80 : 86"
+[1] "80 : 83"
+[1] "80 : 82"
+[1] "81 : 82"
+[1] "Change Point At: 81 , Delta Loss: -20.6265978321835"
+[1] "131 : 214"
+[1] "172 : 214"
+[1] "192 : 214"
+[1] "192 : 203"
+[1] "192 : 198"
+[1] "192 : 195"
+[1] "193 : 195"
+[1] "193 : 194"
+[1] "Change Point At: 194 , Delta Loss: -40.1239978838376"
+[1] "131 : 144"
+[1] "137 : 144"
+[1] "140 : 144"
+[1] "141 : 144"
+[1] "142 : 144"
+[1] "143 : 144"
+[1] "Change Point At: 144 , Delta Loss: -22.9801207437894"
+[1] "Refitting split at 81"
+[1] "Refitting split at 144"
+[1] "Refitting split at 194"
+[1] "Permuting split at 81"
+[1] "Permuting split at 144"
+[1] "Permuting split at 194"
+   i rank   T stat_test
+1  1   15 110      TRUE
+2  1   15 164      TRUE
+3  1   15 214      TRUE
+4  1   15 264      TRUE
+5  2   15 400      TRUE
+6  2   15 450      TRUE
+7  2   15 509      TRUE
+8  2   15 559      TRUE
+9  2   15 623      TRUE
+10 3    5 782      TRUE
+11 3    5 845      TRUE
+12 3    5 895      TRUE
+[1] "Finding optimal rank"
+[1] "Optimal rank: 7"
+[1] "50 : 315"
+[1] "50 : 183"
+[1] "50 : 117"
+[1] "50 : 84"
+[1] "50 : 67"
+[1] "50 : 59"
+[1] "50 : 55"
+[1] "50 : 53"
+[1] "50 : 52"
+[1] "50 : 51"
+[1] "Change Point At: 50 , Delta Loss: -56.7645329967115"
+[1] "100 : 315"
+[1] "207 : 315"
+[1] "260 : 315"
+[1] "287 : 315"
+[1] "287 : 301"
+[1] "287 : 294"
+[1] "287 : 291"
+[1] "287 : 289"
+[1] "288 : 289"
+[1] "Change Point At: 288 , Delta Loss: -31.4638626446378"
+[1] "100 : 238"
+[1] "168 : 238"
+[1] "168 : 203"
+[1] "168 : 186"
+[1] "176 : 186"
+[1] "176 : 181"
+[1] "176 : 179"
+[1] "176 : 178"
+[1] "177 : 178"
+[1] "Change Point At: 177 , Delta Loss: -28.3127364494556"
+[1] "100 : 127"
+[1] "113 : 127"
+[1] "119 : 127"
+[1] "122 : 127"
+[1] "124 : 127"
+[1] "125 : 127"
+[1] "126 : 127"
+[1] "Change Point At: 127 , Delta Loss: -13.7410261578377"
+[1] "227 : 238"
+[1] "232 : 238"
+[1] "234 : 238"
+[1] "235 : 238"
+[1] "236 : 238"
+[1] "237 : 238"
+[1] "Change Point At: 238 , Delta Loss: -28.8585880318851"
+[1] "Refitting split at 50"
+[1] "Refitting split at 127"
+[1] "Refitting split at 177"
+[1] "Refitting split at 238"
+[1] "Refitting split at 288"
+[1] "Permuting split at 50"
+[1] "Permuting split at 127"
+[1] "Permuting split at 177"
+[1] "Permuting split at 238"
+[1] "Permuting split at 288"
+   i rank    T stat_test
+1  1   15  110      TRUE
+2  1   15  164      TRUE
+3  1   15  214      TRUE
+4  1   15  264      TRUE
+5  2   15  400      TRUE
+6  2   15  450      TRUE
+7  2   15  509      TRUE
+8  2   15  559      TRUE
+9  2   15  623      TRUE
+10 3    5  782      TRUE
+11 3    5  845      TRUE
+12 3    5  895      TRUE
+13 4    7 1030      TRUE
+14 4    7 1107      TRUE
+15 4    7 1157      TRUE
+16 4    7 1218      TRUE
+17 4    7 1268      TRUE
+Warning messages:
+1: package ‘fabisearch’ was built under R version 4.1.2 
+2: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+3: 'rgl.init' failed, running with 'rgl.useNULL = TRUE'. 
+> 
+> proc.time()
+     user    system   elapsed 
+587558.22  16784.02  17676.41 

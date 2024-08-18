@@ -1,0 +1,3 @@
+# FaBiSearch Task-Based fMRI - Change Point Detection
+
+Each folder contains the task-based fMRI change point detection results - each folder is contains the results for that particular subject. For each scanning session, there is an associated .sh and .Rout with the same naming convention - these are the shell scripts for SLURM (used to run on a remote cluster) and console logs, respectively. With SLURM, there are associated SLURM .out files which are related to the batch job. Finally, the .rda files contain the results for change point detection.

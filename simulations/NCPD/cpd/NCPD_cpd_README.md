@@ -1,0 +1,3 @@
+# FaBiSearch Simulation - Change Point Detection
+
+Each folder contains the simulation results. For each simulation, the change point detection was performed in the NCPDsimx.R scripts, where x denotes the simulation number. Within each folder, there is an associated .sh and .Rout with the same naming convention - these are the shell scripts for SLURM (used to run on a remote cluster) and console logs, respectively. With SLURM, there are associated SLURM .out files which are related to the batch job. Finally, the results from NCPD are stored as .txt and .rda files, with names taht denote the outputs they contain.

@@ -1,0 +1,1116 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Define the cluster number to use
+> try.K = 4
+> 
+> # Get simulation number
+> simnum = as.numeric(substr(getwd(), nchar(getwd()), nchar(getwd())))
+> 
+> # Load all shared simulation functions
+> filesrcs = list.files(path = "../../../sharedfunctions", pattern="*.R")
+> sapply(paste0("../../../sharedfunctions/", filesrcs), source, .GlobalEnv)
+        ../../../sharedfunctions/GenerateFunctions.R
+value   ?                                           
+visible FALSE                                       
+        ../../../sharedfunctions/Simulations.R
+value   ?                                     
+visible FALSE                                 
+> rm(filesrcs)
+> 
+> # Load all the functions for NCPD
+> source("../../functions/SpectralFunctions.R")
+
+Attaching package: ‘matlab’
+
+The following object is masked from ‘package:stats’:
+
+    reshape
+
+The following objects are masked from ‘package:utils’:
+
+    find, fix
+
+The following object is masked from ‘package:base’:
+
+    sum
+
+
+Attaching package: ‘igraph’
+
+The following objects are masked from ‘package:stats’:
+
+    decompose, spectrum
+
+The following object is masked from ‘package:base’:
+
+    union
+
+> source("../../functions/ParallelFunctions.R")
+> 
+> # Run the experiment
+> source("../../functions/RunSimsNCPD.R")
+[1] 1
+[1] "CP at = 100"
+[1] "result.diff = 1.76567373258026"
+[1] "CP at = 175"
+[1] "result.diff = 1.52728432196652"
+[1] "CP at = 249"
+[1] "result.diff = 1.82666971493933"
+[1] "CP at = 300"
+[1] "result.diff = 1.06905180353608"
+Elapsed time:  347.339  seconds 
+[1] 2
+[1] "CP at = 105"
+[1] "result.diff = 1.74501825412653"
+[1] "CP at = 155"
+[1] "result.diff = 2.00780404454139"
+[1] "CP at = 208"
+[1] "result.diff = 1.36852355065505"
+[1] "CP at = 307"
+[1] "result.diff = 2.81527615858866"
+Elapsed time:  309.721  seconds 
+[1] 3
+[1] "CP at = 100"
+[1] "result.diff = 1.84423002864178"
+[1] "CP at = 151"
+[1] "result.diff = 1.99164523217828"
+[1] "CP at = 201"
+[1] "result.diff = 1.80233272684279"
+[1] "CP at = 299"
+[1] "result.diff = 1.08553362193625"
+Elapsed time:  356.635  seconds 
+[1] 4
+[1] "CP at = 101"
+[1] "result.diff = 1.7940178245263"
+[1] "CP at = 156"
+[1] "result.diff = 1.90070476121004"
+[1] "CP at = 211"
+[1] "result.diff = 1.08333489612158"
+[1] "CP at = 299"
+[1] "result.diff = 1.28332750262639"
+Elapsed time:  384.338  seconds 
+[1] 5
+[1] "CP at = 129"
+[1] "result.diff = 1.76330669547918"
+[1] "CP at = 185"
+[1] "result.diff = 1.98165415745113"
+[1] "CP at = 236"
+[1] "result.diff = 1.98878790614524"
+[1] "CP at = 286"
+[1] "result.diff = 1.38470498667361"
+[1] "CP at = 340"
+[1] "result.diff = 2.94932636371097"
+Elapsed time:  408.683  seconds 
+[1] 6
+[1] "CP at = 119"
+[1] "result.diff = 1.74425007092379"
+[1] "CP at = 213"
+[1] "result.diff = 1.94128821964989"
+[1] "CP at = 300"
+[1] "result.diff = 1.18451983384007"
+Elapsed time:  340.354  seconds 
+[1] 7
+[1] "CP at = 74"
+[1] "result.diff = 1.73149799035267"
+[1] "CP at = 221"
+[1] "result.diff = 1.8221119373783"
+[1] "CP at = 278"
+[1] "result.diff = 1.78867691454158"
+[1] "CP at = 332"
+[1] "result.diff = 2.07821788924145"
+Elapsed time:  402.639  seconds 
+[1] 8
+[1] "CP at = 125"
+[1] "result.diff = 1.60138602390548"
+[1] "CP at = 180"
+[1] "result.diff = 1.79092290506919"
+[1] "CP at = 247"
+[1] "result.diff = 1.25103095220791"
+[1] "CP at = 332"
+[1] "result.diff = 2.95755438292269"
+Elapsed time:  381.76  seconds 
+[1] 9
+[1] "CP at = 100"
+[1] "result.diff = 1.80720593596882"
+[1] "CP at = 152"
+[1] "result.diff = 1.98906511388659"
+[1] "CP at = 207"
+[1] "result.diff = 1.15740347641849"
+[1] "CP at = 301"
+[1] "result.diff = 1.57352567563801"
+Elapsed time:  289.728  seconds 
+[1] 10
+[1] "CP at = 75"
+[1] "result.diff = 1.77881685767316"
+[1] "CP at = 215"
+[1] "result.diff = 1.72929945845871"
+[1] "CP at = 301"
+[1] "result.diff = 1.71702669567924"
+Elapsed time:  294.413  seconds 
+[1] 11
+[1] "CP at = 53"
+[1] "result.diff = 2.50947888545308"
+[1] "CP at = 126"
+[1] "result.diff = 1.74599894608397"
+[1] "CP at = 210"
+[1] "result.diff = 1.96112449682498"
+[1] "CP at = 261"
+[1] "result.diff = 1.33679385837678"
+[1] "CP at = 320"
+[1] "result.diff = 2.93273489023664"
+Elapsed time:  380.198  seconds 
+[1] 12
+[1] "CP at = 103"
+[1] "result.diff = 1.72802144476717"
+[1] "CP at = 194"
+[1] "result.diff = 1.83899197256972"
+[1] "CP at = 263"
+[1] "result.diff = 1.34019097044188"
+[1] "CP at = 315"
+[1] "result.diff = 2.72651703606012"
+Elapsed time:  364.283  seconds 
+[1] 13
+[1] "CP at = 103"
+[1] "result.diff = 1.71124636773543"
+[1] "CP at = 201"
+[1] "result.diff = 1.45629057331042"
+[1] "CP at = 252"
+[1] "result.diff = 1.34206903882192"
+[1] "CP at = 332"
+[1] "result.diff = 2.96026522787852"
+Elapsed time:  391.019  seconds 
+[1] 14
+[1] "CP at = 142"
+[1] "result.diff = 1.50898570072952"
+[1] "CP at = 211"
+[1] "result.diff = 1.86151521079861"
+[1] "CP at = 262"
+[1] "result.diff = 1.36373358209132"
+[1] "CP at = 312"
+[1] "result.diff = 2.89498780550844"
+Elapsed time:  368.155  seconds 
+[1] 15
+[1] "CP at = 109"
+[1] "result.diff = 1.81210478868732"
+[1] "CP at = 182"
+[1] "result.diff = 1.95399516189087"
+[1] "CP at = 234"
+[1] "result.diff = 1.9643174797389"
+[1] "CP at = 299"
+[1] "result.diff = 1.08869587401986"
+Elapsed time:  385.924  seconds 
+[1] 16
+[1] "CP at = 53"
+[1] "result.diff = 2.95355409312085"
+[1] "CP at = 103"
+[1] "result.diff = 1.93255485388711"
+[1] "CP at = 161"
+[1] "result.diff = 1.94117679647548"
+[1] "CP at = 222"
+[1] "result.diff = 1.7164705645472"
+[1] "CP at = 310"
+[1] "result.diff = 2.40075164028964"
+Elapsed time:  323.871  seconds 
+[1] 17
+[1] "CP at = 128"
+[1] "result.diff = 1.79623262919455"
+[1] "CP at = 198"
+[1] "result.diff = 1.43242520744508"
+[1] "CP at = 250"
+[1] "result.diff = 1.36018214352458"
+[1] "CP at = 313"
+[1] "result.diff = 2.91227622312375"
+Elapsed time:  361.161  seconds 
+[1] 18
+[1] "CP at = 102"
+[1] "result.diff = 1.89119678683216"
+[1] "CP at = 163"
+[1] "result.diff = 1.99578203427782"
+[1] "CP at = 228"
+[1] "result.diff = 1.53929682203048"
+[1] "CP at = 282"
+[1] "result.diff = 1.35422573836009"
+[1] "CP at = 336"
+[1] "result.diff = 2.9531234468688"
+Elapsed time:  379.166  seconds 
+[1] 19
+[1] "CP at = 117"
+[1] "result.diff = 1.9882424805033"
+[1] "CP at = 169"
+[1] "result.diff = 1.97486174757296"
+[1] "CP at = 226"
+[1] "result.diff = 1.34459504527226"
+[1] "CP at = 326"
+[1] "result.diff = 2.94053830128753"
+Elapsed time:  343.424  seconds 
+[1] 20
+[1] "CP at = 102"
+[1] "result.diff = 1.81513236511628"
+[1] "CP at = 190"
+[1] "result.diff = 1.96380356588508"
+[1] "CP at = 250"
+[1] "result.diff = 1.92287187429862"
+[1] "CP at = 300"
+[1] "result.diff = 1.11000778802602"
+Elapsed time:  355.443  seconds 
+[1] 21
+[1] "CP at = 117"
+[1] "result.diff = 1.86466122209717"
+[1] "CP at = 215"
+[1] "result.diff = 1.42524582355408"
+[1] "CP at = 301"
+[1] "result.diff = 1.27252898350643"
+Elapsed time:  291.468  seconds 
+[1] 22
+[1] "CP at = 105"
+[1] "result.diff = 1.72358889466749"
+[1] "CP at = 188"
+[1] "result.diff = 2.01283202808122"
+[1] "CP at = 270"
+[1] "result.diff = 1.19452968324649"
+[1] "CP at = 335"
+[1] "result.diff = 2.93356436425996"
+Elapsed time:  390.128  seconds 
+[1] 23
+[1] "CP at = 50"
+[1] "result.diff = 2.52268764690555"
+[1] "CP at = 128"
+[1] "result.diff = 1.72981084818355"
+[1] "CP at = 211"
+[1] "result.diff = 1.55666783737136"
+[1] "CP at = 270"
+[1] "result.diff = 1.58079771193051"
+[1] "CP at = 321"
+[1] "result.diff = 2.41623839028972"
+Elapsed time:  382.337  seconds 
+[1] 24
+[1] "CP at = 115"
+[1] "result.diff = 1.38366847069243"
+[1] "CP at = 214"
+[1] "result.diff = 1.96720994540752"
+[1] "CP at = 301"
+[1] "result.diff = 1.06845056957611"
+Elapsed time:  293.421  seconds 
+[1] 25
+[1] "CP at = 80"
+[1] "result.diff = 2.00833187080474"
+[1] "CP at = 133"
+[1] "result.diff = 1.83680491842825"
+[1] "CP at = 215"
+[1] "result.diff = 1.95601090393354"
+[1] "CP at = 291"
+[1] "result.diff = 1.35192372230053"
+[1] "CP at = 343"
+[1] "result.diff = 2.9515255761083"
+Elapsed time:  412.604  seconds 
+[1] 26
+[1] "CP at = 101"
+[1] "result.diff = 1.78227336168311"
+[1] "CP at = 155"
+[1] "result.diff = 1.94680498200863"
+[1] "CP at = 208"
+[1] "result.diff = 1.62746021422605"
+[1] "CP at = 305"
+[1] "result.diff = 2.3223095931767"
+Elapsed time:  318.403  seconds 
+[1] 27
+[1] "CP at = 102"
+[1] "result.diff = 1.77287342077487"
+[1] "CP at = 160"
+[1] "result.diff = 1.95514530720279"
+[1] "CP at = 219"
+[1] "result.diff = 1.91770000158613"
+[1] "CP at = 300"
+[1] "result.diff = 1.06362116059127"
+Elapsed time:  367.896  seconds 
+[1] 28
+[1] "CP at = 125"
+[1] "result.diff = 1.68394564783236"
+[1] "CP at = 175"
+[1] "result.diff = 1.95313612470877"
+[1] "CP at = 250"
+[1] "result.diff = 1.54845979567607"
+[1] "CP at = 300"
+[1] "result.diff = 1.11487585805615"
+Elapsed time:  358.047  seconds 
+[1] 29
+[1] "CP at = 144"
+[1] "result.diff = 1.65116443643335"
+[1] "CP at = 202"
+[1] "result.diff = 1.49890812425522"
+[1] "CP at = 301"
+[1] "result.diff = 1.47561286611002"
+Elapsed time:  289.158  seconds 
+[1] 30
+[1] "CP at = 98"
+[1] "result.diff = 2.13480292068274"
+[1] "CP at = 150"
+[1] "result.diff = 1.97806041364691"
+[1] "CP at = 203"
+[1] "result.diff = 1.49391111115875"
+[1] "CP at = 301"
+[1] "result.diff = 1.50889741140849"
+Elapsed time:  290.116  seconds 
+[1] 31
+[1] "CP at = 134"
+[1] "result.diff = 1.71481529155738"
+[1] "CP at = 194"
+[1] "result.diff = 1.62556655772674"
+[1] "CP at = 251"
+[1] "result.diff = 1.0888414921772"
+[1] "CP at = 304"
+[1] "result.diff = 1.62188276410337"
+Elapsed time:  359.558  seconds 
+[1] 32
+[1] "CP at = 112"
+[1] "result.diff = 1.64232921911546"
+[1] "CP at = 182"
+[1] "result.diff = 1.79925173225641"
+[1] "CP at = 244"
+[1] "result.diff = 1.78768036079364"
+[1] "CP at = 295"
+[1] "result.diff = 1.26456331689268"
+[1] "CP at = 345"
+[1] "result.diff = 2.92519276046203"
+Elapsed time:  417.612  seconds 
+[1] 33
+[1] "CP at = 102"
+[1] "result.diff = 1.77639573325489"
+[1] "CP at = 175"
+[1] "result.diff = 1.99577386430668"
+[1] "CP at = 231"
+[1] "result.diff = 1.48369868212707"
+[1] "CP at = 300"
+[1] "result.diff = 1.09838065606307"
+Elapsed time:  356.241  seconds 
+[1] 34
+[1] "CP at = 104"
+[1] "result.diff = 1.63884832508114"
+[1] "CP at = 157"
+[1] "result.diff = 1.80129139244327"
+[1] "CP at = 217"
+[1] "result.diff = 1.41825730441219"
+[1] "CP at = 300"
+[1] "result.diff = 1.1216827005297"
+Elapsed time:  363.412  seconds 
+[1] 35
+[1] "CP at = 124"
+[1] "result.diff = 1.685540216929"
+[1] "CP at = 190"
+[1] "result.diff = 1.12876020811376"
+[1] "CP at = 240"
+[1] "result.diff = 1.66692632593303"
+[1] "CP at = 320"
+[1] "result.diff = 2.44680571913381"
+Elapsed time:  367.81  seconds 
+[1] 36
+[1] "CP at = 100"
+[1] "result.diff = 1.78916981663522"
+[1] "CP at = 150"
+[1] "result.diff = 1.94964491728896"
+[1] "CP at = 202"
+[1] "result.diff = 1.48448326009377"
+[1] "CP at = 298"
+[1] "result.diff = 1.18283970105845"
+[1] "CP at = 348"
+[1] "result.diff = 2.98274547998904"
+Elapsed time:  400.536  seconds 
+[1] 37
+[1] "CP at = 91"
+[1] "result.diff = 1.74651763223211"
+[1] "CP at = 208"
+[1] "result.diff = 1.95556685646413"
+[1] "CP at = 258"
+[1] "result.diff = 1.3369897974214"
+[1] "CP at = 328"
+[1] "result.diff = 2.85029389900706"
+Elapsed time:  385.794  seconds 
+[1] 38
+[1] "CP at = 102"
+[1] "result.diff = 1.65448872526398"
+[1] "CP at = 174"
+[1] "result.diff = 1.43362736942225"
+[1] "CP at = 231"
+[1] "result.diff = 1.56882902213619"
+[1] "CP at = 288"
+[1] "result.diff = 1.61689310040664"
+[1] "CP at = 339"
+[1] "result.diff = 2.5065038384696"
+Elapsed time:  404.817  seconds 
+[1] 39
+[1] "CP at = 122"
+[1] "result.diff = 1.70612868470432"
+[1] "CP at = 196"
+[1] "result.diff = 1.83428654308583"
+[1] "CP at = 247"
+[1] "result.diff = 1.96009273341709"
+[1] "CP at = 300"
+[1] "result.diff = 1.11447696944832"
+Elapsed time:  355.084  seconds 
+[1] 40
+[1] "CP at = 146"
+[1] "result.diff = 1.76968529966109"
+[1] "CP at = 203"
+[1] "result.diff = 1.34418178695684"
+[1] "CP at = 255"
+[1] "result.diff = 1.28869180084079"
+[1] "CP at = 305"
+[1] "result.diff = 2.9113124319129"
+Elapsed time:  355.93  seconds 
+[1] 41
+[1] "CP at = 73"
+[1] "result.diff = 1.83924680153967"
+[1] "CP at = 212"
+[1] "result.diff = 1.92879650887559"
+[1] "CP at = 280"
+[1] "result.diff = 1.65301251849811"
+[1] "CP at = 338"
+[1] "result.diff = 2.48661191164242"
+Elapsed time:  406.989  seconds 
+[1] 42
+[1] "CP at = 51"
+[1] "result.diff = 2.92540715321978"
+[1] "CP at = 101"
+[1] "result.diff = 1.80117323356798"
+[1] "CP at = 155"
+[1] "result.diff = 1.98482295477744"
+[1] "CP at = 216"
+[1] "result.diff = 1.8546736557282"
+[1] "CP at = 268"
+[1] "result.diff = 1.31093069392663"
+[1] "CP at = 337"
+[1] "result.diff = 2.94000146824844"
+Elapsed time:  421.841  seconds 
+[1] 43
+[1] "CP at = 107"
+[1] "result.diff = 1.70623992092056"
+[1] "CP at = 159"
+[1] "result.diff = 1.95532422361374"
+[1] "CP at = 211"
+[1] "result.diff = 1.96876402943872"
+[1] "CP at = 300"
+[1] "result.diff = 1.04654614556605"
+[1] "CP at = 350"
+[1] "result.diff = 2.96087521240606"
+Elapsed time:  431.741  seconds 
+[1] 44
+[1] "CP at = 63"
+[1] "result.diff = 1.81982237521063"
+[1] "CP at = 224"
+[1] "result.diff = 1.37378587794313"
+[1] "CP at = 313"
+[1] "result.diff = 2.89758001633364"
+Elapsed time:  310.41  seconds 
+[1] 45
+[1] "CP at = 99"
+[1] "result.diff = 1.85024215136221"
+[1] "CP at = 154"
+[1] "result.diff = 1.51011837118709"
+[1] "CP at = 212"
+[1] "result.diff = 1.713447821381"
+[1] "CP at = 265"
+[1] "result.diff = 1.28871613132315"
+[1] "CP at = 338"
+[1] "result.diff = 2.96494155580912"
+Elapsed time:  403.257  seconds 
+[1] 46
+[1] "CP at = 99"
+[1] "result.diff = 1.86245181727705"
+[1] "CP at = 151"
+[1] "result.diff = 1.85608027573739"
+[1] "CP at = 214"
+[1] "result.diff = 1.50477844632204"
+[1] "CP at = 297"
+[1] "result.diff = 1.33018472175638"
+[1] "CP at = 347"
+[1] "result.diff = 2.98154463730379"
+Elapsed time:  416.299  seconds 
+[1] 47
+[1] "CP at = 111"
+[1] "result.diff = 1.73268011234656"
+[1] "CP at = 177"
+[1] "result.diff = 1.95801808748169"
+[1] "CP at = 266"
+[1] "result.diff = 1.23377206536228"
+[1] "CP at = 345"
+[1] "result.diff = 2.96278826477842"
+Elapsed time:  406.738  seconds 
+[1] 48
+[1] "CP at = 139"
+[1] "result.diff = 1.70698317775171"
+[1] "CP at = 191"
+[1] "result.diff = 1.93926292687931"
+[1] "CP at = 248"
+[1] "result.diff = 1.3660683637813"
+[1] "CP at = 348"
+[1] "result.diff = 2.49358309657742"
+Elapsed time:  414.591  seconds 
+[1] 49
+[1] "CP at = 100"
+[1] "result.diff = 1.82397618292147"
+[1] "CP at = 163"
+[1] "result.diff = 2.01952364143158"
+[1] "CP at = 228"
+[1] "result.diff = 1.12420807455332"
+[1] "CP at = 300"
+[1] "result.diff = 1.08737828676193"
+Elapsed time:  349.084  seconds 
+[1] 50
+[1] "CP at = 126"
+[1] "result.diff = 1.80107560732187"
+[1] "CP at = 199"
+[1] "result.diff = 1.62482112446454"
+[1] "CP at = 249"
+[1] "result.diff = 1.9676884200967"
+[1] "CP at = 300"
+[1] "result.diff = 1.11578959099745"
+Elapsed time:  358.864  seconds 
+[1] 51
+[1] "CP at = 100"
+[1] "result.diff = 1.83662910022428"
+[1] "CP at = 175"
+[1] "result.diff = 2.01242597364819"
+[1] "CP at = 235"
+[1] "result.diff = 1.76788570331081"
+[1] "CP at = 295"
+[1] "result.diff = 1.27392030621268"
+[1] "CP at = 345"
+[1] "result.diff = 2.9824655885241"
+Elapsed time:  399.386  seconds 
+[1] 52
+[1] "CP at = 99"
+[1] "result.diff = 1.84997757892911"
+[1] "CP at = 159"
+[1] "result.diff = 1.96132102811314"
+[1] "CP at = 213"
+[1] "result.diff = 1.63226612633387"
+[1] "CP at = 273"
+[1] "result.diff = 1.26160942780531"
+[1] "CP at = 332"
+[1] "result.diff = 2.96443826042244"
+Elapsed time:  396.871  seconds 
+[1] 53
+[1] "CP at = 139"
+[1] "result.diff = 1.67067867687831"
+[1] "CP at = 197"
+[1] "result.diff = 1.79100444572761"
+[1] "CP at = 258"
+[1] "result.diff = 1.22564304298189"
+[1] "CP at = 312"
+[1] "result.diff = 2.89394883258833"
+Elapsed time:  362.128  seconds 
+[1] 54
+[1] "CP at = 130"
+[1] "result.diff = 1.7930877490801"
+[1] "CP at = 182"
+[1] "result.diff = 1.71947409129797"
+[1] "CP at = 239"
+[1] "result.diff = 1.5422935016903"
+[1] "CP at = 302"
+[1] "result.diff = 1.53649153304849"
+Elapsed time:  354.918  seconds 
+[1] 55
+[1] "CP at = 103"
+[1] "result.diff = 1.6817123478718"
+[1] "CP at = 160"
+[1] "result.diff = 1.69798305526727"
+[1] "CP at = 213"
+[1] "result.diff = 1.95813947110041"
+[1] "CP at = 299"
+[1] "result.diff = 1.2471145875673"
+Elapsed time:  381.845  seconds 
+[1] 56
+[1] "CP at = 103"
+[1] "result.diff = 1.84975961014472"
+[1] "CP at = 200"
+[1] "result.diff = 1.10120319375139"
+[1] "CP at = 251"
+[1] "result.diff = 1.5740702591131"
+[1] "CP at = 319"
+[1] "result.diff = 2.46779034211451"
+Elapsed time:  369.328  seconds 
+[1] 57
+[1] "CP at = 98"
+[1] "result.diff = 1.73777467723067"
+[1] "CP at = 148"
+[1] "result.diff = 1.7632965336834"
+[1] "CP at = 203"
+[1] "result.diff = 1.28793895639344"
+[1] "CP at = 288"
+[1] "result.diff = 1.86580541472967"
+[1] "CP at = 344"
+[1] "result.diff = 1.92566592674018"
+Elapsed time:  397.426  seconds 
+[1] 58
+[1] "CP at = 138"
+[1] "result.diff = 1.94638233166916"
+[1] "CP at = 195"
+[1] "result.diff = 1.67688643480513"
+[1] "CP at = 247"
+[1] "result.diff = 1.99616068167153"
+[1] "CP at = 310"
+[1] "result.diff = 1.9323313376078"
+Elapsed time:  375.829  seconds 
+[1] 59
+[1] "CP at = 76"
+[1] "result.diff = 1.97620152013392"
+[1] "CP at = 126"
+[1] "result.diff = 1.71181891195049"
+[1] "CP at = 201"
+[1] "result.diff = 1.09069824590736"
+[1] "CP at = 300"
+[1] "result.diff = 1.1097845674004"
+Elapsed time:  338.604  seconds 
+[1] 60
+[1] "CP at = 99"
+[1] "result.diff = 1.82116136038745"
+[1] "CP at = 187"
+[1] "result.diff = 1.95641959487008"
+[1] "CP at = 272"
+[1] "result.diff = 1.11633702031349"
+[1] "CP at = 345"
+[1] "result.diff = 2.94897249494874"
+Elapsed time:  388.927  seconds 
+[1] 61
+[1] "CP at = 50"
+[1] "result.diff = 2.96204216042702"
+[1] "CP at = 100"
+[1] "result.diff = 1.85056542643705"
+[1] "CP at = 158"
+[1] "result.diff = 1.99124005267473"
+[1] "CP at = 210"
+[1] "result.diff = 1.86552863929355"
+[1] "CP at = 269"
+[1] "result.diff = 1.32097962231259"
+[1] "CP at = 326"
+[1] "result.diff = 2.93828859380189"
+Elapsed time:  402.922  seconds 
+[1] 62
+[1] "CP at = 101"
+[1] "result.diff = 1.84854050666478"
+[1] "CP at = 184"
+[1] "result.diff = 1.8638263911226"
+[1] "CP at = 236"
+[1] "result.diff = 1.43819591385456"
+[1] "CP at = 295"
+[1] "result.diff = 1.9239193551941"
+[1] "CP at = 345"
+[1] "result.diff = 1.98472242086987"
+Elapsed time:  418.61  seconds 
+[1] 63
+[1] "CP at = 103"
+[1] "result.diff = 1.72557676900035"
+[1] "CP at = 159"
+[1] "result.diff = 1.94150167674308"
+[1] "CP at = 213"
+[1] "result.diff = 1.62196626308112"
+[1] "CP at = 300"
+[1] "result.diff = 1.10386489025154"
+Elapsed time:  363.306  seconds 
+[1] 64
+[1] "CP at = 100"
+[1] "result.diff = 1.84743619085928"
+[1] "CP at = 182"
+[1] "result.diff = 2.00980874168767"
+[1] "CP at = 238"
+[1] "result.diff = 1.96934633749212"
+[1] "CP at = 300"
+[1] "result.diff = 1.13969689563417"
+Elapsed time:  338.54  seconds 
+[1] 65
+[1] "CP at = 103"
+[1] "result.diff = 1.70450937239513"
+[1] "CP at = 190"
+[1] "result.diff = 1.88560493627299"
+[1] "CP at = 242"
+[1] "result.diff = 1.57448557732198"
+[1] "CP at = 300"
+[1] "result.diff = 1.08342701389452"
+Elapsed time:  353.319  seconds 
+[1] 66
+[1] "CP at = 123"
+[1] "result.diff = 1.77229141566934"
+[1] "CP at = 208"
+[1] "result.diff = 1.98175923504811"
+[1] "CP at = 300"
+[1] "result.diff = 1.04806029184014"
+[1] "CP at = 350"
+[1] "result.diff = 2.95435738405019"
+Elapsed time:  402.345  seconds 
+[1] 67
+[1] "CP at = 102"
+[1] "result.diff = 1.71618031750519"
+[1] "CP at = 192"
+[1] "result.diff = 1.8269203283788"
+[1] "CP at = 242"
+[1] "result.diff = 1.25410785103741"
+[1] "CP at = 326"
+[1] "result.diff = 2.93145394610982"
+Elapsed time:  378.211  seconds 
+[1] 68
+[1] "CP at = 89"
+[1] "result.diff = 1.73596106349563"
+[1] "CP at = 219"
+[1] "result.diff = 1.9952912930578"
+[1] "CP at = 278"
+[1] "result.diff = 1.37249769083771"
+[1] "CP at = 334"
+[1] "result.diff = 2.0257008970844"
+Elapsed time:  401.799  seconds 
+[1] 69
+[1] "CP at = 105"
+[1] "result.diff = 1.80673078798681"
+[1] "CP at = 171"
+[1] "result.diff = 1.9563248190916"
+[1] "CP at = 249"
+[1] "result.diff = 1.63487167995515"
+[1] "CP at = 299"
+[1] "result.diff = 1.09407410368928"
+[1] "CP at = 349"
+[1] "result.diff = 2.93518064705598"
+Elapsed time:  418.385  seconds 
+[1] 70
+[1] "CP at = 112"
+[1] "result.diff = 1.7617356066527"
+[1] "CP at = 163"
+[1] "result.diff = 1.99470095736404"
+[1] "CP at = 234"
+[1] "result.diff = 1.67942950995722"
+[1] "CP at = 300"
+[1] "result.diff = 1.07942281759368"
+Elapsed time:  361.379  seconds 
+[1] 71
+[1] "CP at = 102"
+[1] "result.diff = 1.79234493811311"
+[1] "CP at = 175"
+[1] "result.diff = 1.95150915928726"
+[1] "CP at = 231"
+[1] "result.diff = 1.73272470445003"
+[1] "CP at = 309"
+[1] "result.diff = 2.377062489183"
+Elapsed time:  361.847  seconds 
+[1] 72
+[1] "CP at = 55"
+[1] "result.diff = 2.94220178360446"
+[1] "CP at = 137"
+[1] "result.diff = 1.81479583389317"
+[1] "CP at = 219"
+[1] "result.diff = 1.95038715546163"
+[1] "CP at = 271"
+[1] "result.diff = 1.93709325060443"
+[1] "CP at = 326"
+[1] "result.diff = 1.97301746065263"
+Elapsed time:  396.317  seconds 
+[1] 73
+[1] "CP at = 100"
+[1] "result.diff = 1.81927805780964"
+[1] "CP at = 163"
+[1] "result.diff = 1.95547712150091"
+[1] "CP at = 219"
+[1] "result.diff = 1.15150725636696"
+[1] "CP at = 300"
+[1] "result.diff = 1.10095140524725"
+Elapsed time:  349.941  seconds 
+[1] 74
+[1] "CP at = 74"
+[1] "result.diff = 1.77920128432821"
+[1] "CP at = 205"
+[1] "result.diff = 1.90758208087265"
+[1] "CP at = 259"
+[1] "result.diff = 1.32550391503317"
+[1] "CP at = 319"
+[1] "result.diff = 2.97888085667365"
+Elapsed time:  372.857  seconds 
+[1] 75
+[1] "CP at = 101"
+[1] "result.diff = 1.8148353107375"
+[1] "CP at = 182"
+[1] "result.diff = 1.93873587680176"
+[1] "CP at = 240"
+[1] "result.diff = 1.48290722357388"
+[1] "CP at = 300"
+[1] "result.diff = 1.18594452790119"
+Elapsed time:  355.59  seconds 
+[1] 76
+[1] "CP at = 103"
+[1] "result.diff = 1.7780831691772"
+[1] "CP at = 155"
+[1] "result.diff = 1.98985086132798"
+[1] "CP at = 207"
+[1] "result.diff = 1.86005150633323"
+[1] "CP at = 300"
+[1] "result.diff = 1.08014140267048"
+Elapsed time:  356.356  seconds 
+[1] 77
+[1] "CP at = 100"
+[1] "result.diff = 1.81711452328826"
+[1] "CP at = 159"
+[1] "result.diff = 1.98615358679273"
+[1] "CP at = 236"
+[1] "result.diff = 1.0943379154103"
+[1] "CP at = 299"
+[1] "result.diff = 1.10714374764491"
+Elapsed time:  365.696  seconds 
+[1] 78
+[1] "CP at = 102"
+[1] "result.diff = 1.69473695917922"
+[1] "CP at = 183"
+[1] "result.diff = 1.8500673847384"
+[1] "CP at = 236"
+[1] "result.diff = 1.49079671647306"
+[1] "CP at = 296"
+[1] "result.diff = 1.28521817027173"
+[1] "CP at = 346"
+[1] "result.diff = 2.94722306536228"
+Elapsed time:  417.471  seconds 
+[1] 79
+[1] "CP at = 106"
+[1] "result.diff = 1.70351732191939"
+[1] "CP at = 164"
+[1] "result.diff = 1.98522324455455"
+[1] "CP at = 215"
+[1] "result.diff = 1.85391687272714"
+[1] "CP at = 269"
+[1] "result.diff = 1.61884280553205"
+[1] "CP at = 321"
+[1] "result.diff = 2.43490179167163"
+Elapsed time:  405.491  seconds 
+[1] 80
+[1] "CP at = 103"
+[1] "result.diff = 1.72729191458958"
+[1] "CP at = 157"
+[1] "result.diff = 2.04638607993162"
+[1] "CP at = 246"
+[1] "result.diff = 1.50073082666908"
+[1] "CP at = 300"
+[1] "result.diff = 1.07913469482546"
+Elapsed time:  364.11  seconds 
+[1] 81
+[1] "CP at = 109"
+[1] "result.diff = 1.68657748711577"
+[1] "CP at = 188"
+[1] "result.diff = 1.5806032382952"
+[1] "CP at = 238"
+[1] "result.diff = 1.3721570690763"
+[1] "CP at = 321"
+[1] "result.diff = 2.8983401274065"
+Elapsed time:  359.389  seconds 
+[1] 82
+[1] "CP at = 132"
+[1] "result.diff = 1.94813832469506"
+[1] "CP at = 186"
+[1] "result.diff = 1.8933858615537"
+[1] "CP at = 237"
+[1] "result.diff = 1.37746491601561"
+[1] "CP at = 315"
+[1] "result.diff = 2.93783178198671"
+Elapsed time:  394.169  seconds 
+[1] 83
+[1] "CP at = 102"
+[1] "result.diff = 1.73078477203184"
+[1] "CP at = 157"
+[1] "result.diff = 1.98523149765009"
+[1] "CP at = 254"
+[1] "result.diff = 1.41576653784482"
+[1] "CP at = 310"
+[1] "result.diff = 2.77547795776905"
+Elapsed time:  362.14  seconds 
+[1] 84
+[1] "CP at = 100"
+[1] "result.diff = 1.83495442808551"
+[1] "CP at = 156"
+[1] "result.diff = 2.01997549961649"
+[1] "CP at = 237"
+[1] "result.diff = 1.41041731350158"
+[1] "CP at = 300"
+[1] "result.diff = 1.12203370493421"
+Elapsed time:  354.563  seconds 
+[1] 85
+[1] "CP at = 100"
+[1] "result.diff = 1.80242870334417"
+[1] "CP at = 194"
+[1] "result.diff = 1.9175643686401"
+[1] "CP at = 245"
+[1] "result.diff = 1.81689496564962"
+[1] "CP at = 300"
+[1] "result.diff = 1.08085913941172"
+Elapsed time:  337.69  seconds 
+[1] 86
+[1] "CP at = 102"
+[1] "result.diff = 1.68929384765205"
+[1] "CP at = 157"
+[1] "result.diff = 1.99967364727933"
+[1] "CP at = 218"
+[1] "result.diff = 1.37831923727863"
+[1] "CP at = 292"
+[1] "result.diff = 1.23201713842212"
+Elapsed time:  403.764  seconds 
+[1] 87
+[1] "CP at = 101"
+[1] "result.diff = 1.82528133009782"
+[1] "CP at = 194"
+[1] "result.diff = 2.01646369801153"
+[1] "CP at = 244"
+[1] "result.diff = 1.98971490351133"
+[1] "CP at = 307"
+[1] "result.diff = 1.98471609872417"
+Elapsed time:  356.418  seconds 
+[1] 88
+[1] "CP at = 52"
+[1] "result.diff = 1.97664324388733"
+[1] "CP at = 103"
+[1] "result.diff = 1.78869421518121"
+[1] "CP at = 157"
+[1] "result.diff = 1.95527717287997"
+[1] "CP at = 209"
+[1] "result.diff = 1.97250118915951"
+[1] "CP at = 271"
+[1] "result.diff = 1.34669270557673"
+[1] "CP at = 338"
+[1] "result.diff = 2.96966546521436"
+Elapsed time:  413.732  seconds 
+[1] 89
+[1] "CP at = 120"
+[1] "result.diff = 1.61697533447749"
+[1] "CP at = 194"
+[1] "result.diff = 1.55557330230176"
+[1] "CP at = 251"
+[1] "result.diff = 1.96309265889531"
+[1] "CP at = 301"
+[1] "result.diff = 1.09465982533634"
+Elapsed time:  355.964  seconds 
+[1] 90
+[1] "CP at = 105"
+[1] "result.diff = 1.65641075054876"
+[1] "CP at = 160"
+[1] "result.diff = 1.80946685055833"
+[1] "CP at = 214"
+[1] "result.diff = 1.43220603865991"
+[1] "CP at = 297"
+[1] "result.diff = 1.30557091403444"
+[1] "CP at = 348"
+[1] "result.diff = 2.9676820700003"
+Elapsed time:  422.939  seconds 
+[1] 91
+[1] "CP at = 111"
+[1] "result.diff = 1.75931567837323"
+[1] "CP at = 185"
+[1] "result.diff = 1.94851381687346"
+[1] "CP at = 235"
+[1] "result.diff = 1.428128448121"
+[1] "CP at = 300"
+[1] "result.diff = 1.0756939520193"
+Elapsed time:  354.888  seconds 
+[1] 92
+[1] "CP at = 101"
+[1] "result.diff = 1.77670484416485"
+[1] "CP at = 182"
+[1] "result.diff = 1.93011970833684"
+[1] "CP at = 249"
+[1] "result.diff = 1.50736815910474"
+[1] "CP at = 300"
+[1] "result.diff = 1.07989947590276"
+Elapsed time:  355.221  seconds 
+[1] 93
+[1] "CP at = 124"
+[1] "result.diff = 1.54542692407979"
+[1] "CP at = 221"
+[1] "result.diff = 1.33790944114443"
+[1] "CP at = 307"
+[1] "result.diff = 2.88747541233187"
+Elapsed time:  298.521  seconds 
+[1] 94
+[1] "CP at = 119"
+[1] "result.diff = 1.72968138545072"
+[1] "CP at = 175"
+[1] "result.diff = 1.97314877890572"
+[1] "CP at = 237"
+[1] "result.diff = 1.44829975303253"
+[1] "CP at = 300"
+[1] "result.diff = 1.164093556623"
+Elapsed time:  356.084  seconds 
+[1] 95
+[1] "CP at = 140"
+[1] "result.diff = 1.73558509826067"
+[1] "CP at = 211"
+[1] "result.diff = 1.98302180897646"
+[1] "CP at = 290"
+[1] "result.diff = 1.31427833954307"
+[1] "CP at = 342"
+[1] "result.diff = 2.79543851205665"
+Elapsed time:  411.001  seconds 
+[1] 96
+[1] "CP at = 121"
+[1] "result.diff = 1.54035279382049"
+[1] "CP at = 208"
+[1] "result.diff = 1.81729119207278"
+[1] "CP at = 272"
+[1] "result.diff = 1.28947949562217"
+[1] "CP at = 326"
+[1] "result.diff = 2.93492009869026"
+Elapsed time:  383.086  seconds 
+[1] 97
+[1] "CP at = 125"
+[1] "result.diff = 1.78839424498197"
+[1] "CP at = 215"
+[1] "result.diff = 1.90731238913538"
+[1] "CP at = 299"
+[1] "result.diff = 1.21756060417652"
+[1] "CP at = 349"
+[1] "result.diff = 2.95646814255721"
+Elapsed time:  420.889  seconds 
+[1] 98
+[1] "CP at = 105"
+[1] "result.diff = 1.6909747972516"
+[1] "CP at = 194"
+[1] "result.diff = 1.80441675553839"
+[1] "CP at = 248"
+[1] "result.diff = 1.96163322318336"
+[1] "CP at = 298"
+[1] "result.diff = 1.0900178464283"
+Elapsed time:  379.946  seconds 
+[1] 99
+[1] "CP at = 59"
+[1] "result.diff = 2.92861108473614"
+[1] "CP at = 109"
+[1] "result.diff = 1.99290495845887"
+[1] "CP at = 162"
+[1] "result.diff = 1.93536236066933"
+[1] "CP at = 216"
+[1] "result.diff = 1.99728455067249"
+[1] "CP at = 284"
+[1] "result.diff = 1.28428630909026"
+[1] "CP at = 339"
+[1] "result.diff = 2.79052124136417"
+Elapsed time:  419.313  seconds 
+[1] 100
+[1] "CP at = 103"
+[1] "result.diff = 1.73508030305436"
+[1] "CP at = 163"
+[1] "result.diff = 2.0338937496433"
+[1] "CP at = 235"
+[1] "result.diff = 1.45728024673623"
+[1] "CP at = 300"
+[1] "result.diff = 1.14217170200091"
+Elapsed time:  359.643  seconds 
+> 
+> proc.time()
+     user    system   elapsed 
+17448.459  4917.755 37447.734 
