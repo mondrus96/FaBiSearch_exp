@@ -1,4 +1,4 @@
-# FaBiSearch_exp
+# FaBiSearch experiments
 
 This repository contains the code and experiments for "Factorized Binary Search: change point detection in the network structure of multivariate high-dimensional time series" (Ondrus et al. 2022, 	arXiv:2103.06347 [stat.ME]).
 
