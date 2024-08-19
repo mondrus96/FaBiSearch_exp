@@ -6,19 +6,19 @@ This repository contains the code and experiments for "Factorized Binary Search:
 
 ## Simulations
 
-`simulations` contains simulated data experiments and comparisons to NCPD (Network Change Point Detection)
+`simulations` contains simulated data experiments and comparisons to NCPD (Network Change Point Detection). We find our method is generally superior to NCPD.
 
 ![Simulation results](images/simresults.png)
 
 ## Resting-state fMRI experiments
 
-`rs_fMRI` contains the code for resting-state experiments, for which we investigate test-retest reliability in the NYU CSC dataset . An example of the estimated dynamic network structures is shown below, for subject 1 in 
+`rs_fMRI` contains the code for resting-state experiments, for which we investigate test-retest reliability in the [NYU CSC dataset](https://www.nitrc.org/projects/nyu_trt). An example of the estimated dynamic network structures is shown below, for subject 1 in 
 
 ![Subject 1, visit 2](images/visit2_sub1.png)
 
 ## Task-based fMRI experiments
 
-`tb_fMRI` contains the task-based experiments, where subjects are reading Chapter 9 of *Harry Potter and the Sorcerer’s Stone*. We find change points are concentrated around key plot twists.
+`tb_fMRI` contains the task-based experiments, where subjects are [reading Chapter 9 of *Harry Potter and the Sorcerer’s Stone*](http://www.cs.cmu.edu/~fmri/plosone/). We find change points are concentrated around key plot twists.
 
 ![Change points during reading](images/hp_cps_density.png)
 
