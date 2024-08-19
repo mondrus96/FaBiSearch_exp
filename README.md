@@ -12,7 +12,7 @@ This repository contains the code and experiments for "Factorized Binary Search:
 
 ## Resting-state fMRI experiments
 
-`rs_fMRI` contains the code for resting-state experiments, for which we investigate test-retest reliability in the [NYU CSC dataset](https://www.nitrc.org/projects/nyu_trt). An example of the estimated dynamic network structures is shown below, for subject 1 in 
+`rs_fMRI` contains the code for resting-state experiments, for which we investigate test-retest reliability in the [NYU CSC dataset](https://www.nitrc.org/projects/nyu_trt). An example of the estimated dynamic network structures is shown below, for subject 1 during visit 2.
 
 ![Subject 1, visit 2](images/visit2_sub1.png)
 
