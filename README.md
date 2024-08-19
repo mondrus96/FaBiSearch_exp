@@ -1,16 +1,28 @@
 # FaBiSearch experiments
 
-This repository contains the code and experiments for "Factorized Binary Search: change point detection in the network structure of multivariate high-dimensional time series" (Ondrus et al. 2022, 	arXiv:2103.06347 [stat.ME]).
+This repository contains the code and experiments for "Factorized Binary Search: change point detection in the network structure of multivariate high-dimensional time series" (Ondrus et al. 2022, 	arXiv:2103.06347 [stat.ME]). The method uses non-negative matrix factorization (NMF) to model signals, and a novel binary search based segmentation, depicted below:
 
-It is organized into the following main folders:
+![Binary search segmentation](images/binsearch.png)
 
-rs_fMRI - this contains the resting-state experiments
+## Simulations
 
-tb_fMRI - this contains the task-based fMRI experiments
+`simulations` contains simulated data experiments and comparisons to NCPD (Network Change Point Detection)
 
-simulations - this contains the simulations used to validate FaBiSearch, as well as compare it to NCPD (Network Change Point Detection)
+![Simulation results](images/simresults.png)
 
-Cite this work:
+## Resting-state fMRI experiments
+
+`rs_fMRI` contains the code for resting-state experiments, for which we investigate test-retest reliability in the NYU CSC dataset . An example of the estimated dynamic network structures is shown below, for subject 1 in 
+
+![Subject 1, visit 2](images/visit2_sub1.png)
+
+## Task-based fMRI experiments
+
+`tb_fMRI` contains the task-based experiments, where subjects are reading Chapter 9 of *Harry Potter and the Sorcerer’s Stone*. We find change points are concentrated around key plot twists.
+
+![Change points during reading](images/hp_cps_density.png)
+
+For more information, and to cite this work:
 
 ```bibtex
 @article{ondrus2021factorized,
