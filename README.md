@@ -1,6 +1,6 @@
 # FaBiSearch experiments
 
-This repository contains the code and experiments for "Factorized Binary Search: change point detection in the network structure of multivariate high-dimensional time series" (Ondrus et al. 2022, 	arXiv:2103.06347 [stat.ME]). The method uses non-negative matrix factorization (NMF) to model signals, and a novel binary search based segmentation, depicted below:
+This repository contains the code and experiments for "Factorized Binary Search: change point detection in the network structure of multivariate high-dimensional time series" (Ondrus et al. 2025, 	arXiv:2103.06347 [stat.ME]). The method uses non-negative matrix factorization (NMF) to model signals, and a novel binary search based segmentation, depicted below:
 
 ![Binary search segmentation](images/binsearch.png)
 
