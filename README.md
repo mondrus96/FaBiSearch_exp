@@ -25,10 +25,15 @@ This repository contains the code and experiments for "Factorized Binary Search:
 For more information, and to cite this work:
 
 ```bibtex
-@article{ondrus2021factorized,
-  title={Factorized binary search: change point detection in the network structure of multivariate high-dimensional time series},
-  author={Ondrus, Martin and Olds, Emily and Cribben, Ivor},
-  journal={arXiv preprint arXiv:2103.06347},
-  year={2021}
+@article{10.1162/imag_a_00520,
+    author = {Ondrus, Martin and Olds, Emily and Cribben, Ivor},
+    title = {Factorized Binary Search: change point detection in the network structure of multivariate high-dimensional time series},
+    journal = {Imaging Neuroscience},
+    year = {2025},
+    month = {03},
+    issn = {2837-6056},
+    doi = {10.1162/imag_a_00520},
+    url = {https://doi.org/10.1162/imag\_a\_00520},
+    eprint = {https://direct.mit.edu/imag/article-pdf/doi/10.1162/imag\_a\_00520/2507946/imag\_a\_00520.pdf},
 }
 ```
